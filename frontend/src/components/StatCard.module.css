@@ -1,0 +1,73 @@
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+}
+
+.card:hover {
+  border-color: var(--border-hi);
+}
+
+.card.indigo::before { background: var(--indigo); }
+.card.green::before  { background: var(--green); }
+.card.amber::before  { background: var(--amber); }
+.card.red::before    { background: var(--red); }
+
+.label {
+  font-size: 10px;
+  font-family: var(--font-mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+
+.value {
+  font-size: 28px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--text-1);
+  line-height: 1.1;
+}
+
+.value.mono {
+  font-family: var(--font-mono);
+  font-size: 24px;
+}
+
+.sub {
+  font-size: 11px;
+  color: var(--text-2);
+  font-family: var(--font-mono);
+}
+
+.glow {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  opacity: 0.06;
+  filter: blur(12px);
+}
+
+.card.indigo .glow { background: var(--indigo); }
+.card.green .glow  { background: var(--green); }
+.card.amber .glow  { background: var(--amber); }
+.card.red .glow    { background: var(--red); }

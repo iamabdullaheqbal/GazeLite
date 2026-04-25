@@ -1,0 +1,30 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.canvas {
+  border-radius: 6px;
+  display: block;
+  border: 1px solid var(--border);
+}
+
+.legend {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legendBar {
+  flex: 1;
+  height: 6px;
+  border-radius: 3px;
+  background: linear-gradient(to right, #6366f1, #22d3a5, #f59e0b, #f97316, #f43f5e);
+}
+
+.legendLabel {
+  font-size: 10px;
+  font-family: var(--font-mono);
+  color: var(--text-3);
+}
